@@ -11,5 +11,4 @@ workflows:
   heroku_deploy:
     jobs:
       - heroku/push-docker-image
-         image: dareedyone/dwdthreepointtwo
-         tag: 'latest'
+        
