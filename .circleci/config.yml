@@ -10,8 +10,4 @@ workflows:
           tag: "latest"
   heroku_deploy:
     jobs:
-      - push-docker-image:
-          requires:
-            - docker/publish
-          app_name: $HEROKU_APP_NAME
-          api-key: $HEROKU_API_KEY
+      - heroku/push-docker-image
