@@ -7,5 +7,5 @@ COPY country-data-app /usr/src/country-data-app
 WORKDIR /usr/src/country-data-app
 RUN npm install
 EXPOSE 3000
-
+CMD ["npm", "start"]
 
