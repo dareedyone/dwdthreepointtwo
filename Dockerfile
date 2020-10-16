@@ -5,6 +5,7 @@ RUN apt-get --fix-missing update && \
     apt-get install -y nodejs 
 COPY country-data-app /usr/src/country-data-app
 WORKDIR /usr/src/country-data-app
+RUN npm install
 EXPOSE 3000
 
 
