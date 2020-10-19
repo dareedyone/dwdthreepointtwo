@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-RUN apt-get --fix-missing update && \
+RUN apt-get update && \
     apt-get install -y curl && \
     curl -sL https://deb.nodesource.com/setup_14.x | bash && \
     apt-get install -y nodejs && apt-get purge -y --auto-remove curl && \
@@ -7,6 +7,6 @@ RUN apt-get --fix-missing update && \
 COPY phonebook-app /usr/src/phonebook-app
 WORKDIR /usr/src/phonebook-app
 RUN npm install
-EXPOSE 3000
+EXPOSE 3001
 CMD ["node", "."]
 
